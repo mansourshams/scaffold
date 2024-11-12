@@ -1,14 +1,14 @@
-name: Python application test with Github Actions
+name: Python application test with Github Actions using python 3.5
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.8
+      - name: Set up Python 3.5
         uses: actions/setup-python@v4
         with:
-          python-version: 3.8
+          python-version: 3.3
       - name: Install dependencies
         run: |
           make install
